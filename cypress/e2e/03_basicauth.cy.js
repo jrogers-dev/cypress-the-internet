@@ -8,13 +8,13 @@ describe('Completes tests on elements at https://the-internet.herokuapp.com/basi
     cy.get('p').should('contain.text', 'Congratulations! You must have the proper credentials.')
   });
 
-  it('Successfully login using headers', function () {
+  it('Passes login by appending an authorization header', function () {
     cy.visit("https://the-internet.herokuapp.com/basic_auth", {
         headers: {
             authorization: 'Basic YWRtaW46YWRtaW4='
         },
         failOnStatusCode: false
     })
-    cy.get('p').should('include.text', 'Congratulations! You must have the proper credentials.')
+    cy.get('p').should('contain.text', 'Congratulations! You must have the proper credentials.')
   });
 })
