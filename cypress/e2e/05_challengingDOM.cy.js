@@ -1,4 +1,4 @@
-describe('Completes tests on elements at https://the-internet.herokuapp.com/broken_images', () => {
+describe('Completes tests on elements at https://the-internet.herokuapp.com/challenging_dom', () => {
   it('Passes if the page exists', () => {
     cy.visit('https://the-internet.herokuapp.com/challenging_dom');
   });
@@ -97,5 +97,14 @@ describe('Completes tests on elements at https://the-internet.herokuapp.com/brok
     cy.get('tbody > tr:nth-child(8) > td:nth-child(7)').should('contain.text', 'edit').and('contain.text', 'delete');
     cy.get('tbody > tr:nth-child(9) > td:nth-child(7)').should('contain.text', 'edit').and('contain.text', 'delete');
     cy.get('tbody > tr:nth-child(10) > td:nth-child(7)').should('contain.text', 'edit').and('contain.text', 'delete');
+  })
+
+  it('Tests that the canvas element exists and is the proper width and height', () => {
+    cy.visit('https://the-internet.herokuapp.com/challenging_dom');
+
+    cy.get('#canvas').then( ($el) => {
+      expect($el.width()).to.eq(599);
+      expect($el.height()).to.eq(200);
+    });
   })
 })
