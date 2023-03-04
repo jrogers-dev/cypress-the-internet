@@ -1,9 +1,3 @@
-//const { expect } = require("chai");
-
-//const { expect } = require("chai");
-
-//const { expect } = require("chai");
-
 describe('Completes tests on elements at https://the-internet.herokuapp.com/checkboxes', () => {
   it('Passes if the page exists', () => {
     cy.visit('https://the-internet.herokuapp.com/checkboxes');
