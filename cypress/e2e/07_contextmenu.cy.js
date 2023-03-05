@@ -13,6 +13,6 @@ describe('Completes tests on elements at https://the-internet.herokuapp.com/cont
     cy.get("#hot-spot").rightclick();
     cy.on('window:alert', (str) => {
       expect(str).to.equal('You selected a context menu');
-    })
+    });
   });
 })
