@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe('Completes tests on elements at https://the-internet.herokuapp.com/basic_auth', () => {
   it('Passes if the page exists, does not attempt to authenticate', () => {
     cy.visit('https://the-internet.herokuapp.com/basic_auth', {failOnStatusCode: false});

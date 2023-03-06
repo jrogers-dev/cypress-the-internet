@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe('Completes tests on elements at https://the-internet.herokuapp.com/add_remove_elements/', () => {
   it('Passes if the page exists', () => {
     cy.visit('https://the-internet.herokuapp.com/add_remove_elements/');

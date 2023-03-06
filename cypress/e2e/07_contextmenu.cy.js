@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe('Completes tests on elements at https://the-internet.herokuapp.com/context_menu', () => {
   it('Passes if the page exists', () => {
     cy.visit('https://the-internet.herokuapp.com/context_menu');
