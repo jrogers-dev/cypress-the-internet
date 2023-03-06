@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jrogers-dev/cypress-the-internet#readme",
   "dependencies": {
     "cypress": "^12.7.0"
+  },
+  "devDependencies": {
+    "cypress-wait-until": "^1.7.2"
   }
 }
